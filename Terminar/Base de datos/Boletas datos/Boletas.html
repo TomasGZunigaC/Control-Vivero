@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Base de datos/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <title>Boletas Database</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="/index.html">Inicio</a>
+        <div class="dropdown">
+            <button class="dropbtn">Base de datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/Base de datos/Clientes datos/Clientes.html">Clientes</a>
+                <a href="/Base de datos/Movimiento datos/Movimiento.html">Movimiento</a>
+                <a href="/Base de datos/Productos datos/Productos.html">Productos</a>
+                <a href="/Base de datos/Proveedores datos/Proveedores.html">Proveedores</a>
+            </div>
+        </div> 
+    </div>
+    <main>
+        <form class="form-register" method="post">
+            <h4>Registros de Boletas</h4>
+            <input class="controls" type="text" id="BoletaTotal" placeholder="Ingrese Total">
+            <input class="controls" type="text" id="BoletaMetodo" placeholder="Ingrese Metodo">
+            <input class="controls" type="date" id="BoletaFecha" placeholder="Ingrese Fecha">
+            <input class="controls" type="mail" id="BoletaCantidad" placeholder="Ingrese Cantidad">
+            <button class="botons" id="btnGuardar">Guardar</button>
+            <input class="botons" type="submit" value="Limpiar" onclick="limpiar()">
+        </form>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Total</th>
+                        <th>Metodo</th>
+                        <th>Fecha</th>
+                        <th>Cantidad</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="contenido"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/Base de datos/validacion.js"></script>
+    <script src="/Base de datos/Boletas datos/scripts.js" type="module"></script>
+</body>
+</html>
